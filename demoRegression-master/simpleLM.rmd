@@ -9,6 +9,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+##Introduction
+
+We are trying to find the best way to predict the length of a bear other than the NECK measurements.  
+
 ## make a simple regression model
 
 ```{r}
@@ -24,6 +28,10 @@ abline(simp)
 summary.lm(simp)
 ```
 
+The adjusted r-squared is 0.7476
+
+The scatter plot show that when the NECK measurement goes up so does the bear LENGTH
+
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
 
@@ -32,6 +40,8 @@ new <- data.frame(NECK=c(17,22,26))
 predict(simp,new)
 predict(simp,new,se.fit=TRUE,interval="prediction")
 ```
+
+
 
 ##Numerical Summary
 
@@ -48,6 +58,11 @@ plot(LENGTH~CHEST,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+
+The adjusted r-squared is 0.7869
+
+The scatter plot show that when the CHEST measurement goes up so does the bear LENGTH
+
 ## Numerical Summary
 
 ```{r}
