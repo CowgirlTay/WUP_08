@@ -53,3 +53,7 @@ summary.lm(simp)
 ```{r}
 cor(bears$LENGTH,bears$CHEST)
 ```
+
+##Conculsion
+
+Regression model that predicts length based on CHEST is better than the one that is based on NECK. The adjusted r-squared for CHEST is larger than the NECK adjusted r-squared. 
